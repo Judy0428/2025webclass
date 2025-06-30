@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  z-index: 99;
+}
+.header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+}
+.header .wrap .logo {
+  font-size: 1.5rem;
+}
+.header .wrap .menu ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.header .wrap .menu ul li.active a {
+  background-color: #facc15;
+  color: #000;
+}
+.header .wrap .menu ul li.active a:hover {
+  background-color: #ffe169;
+  color: #000;
+}
+.header .wrap .menu ul li a {
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.header .wrap .menu ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.header .wrap .hamburger {
+  display: none;
+  width: 60px;
+  height: 60px;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.header .wrap .hamburger > span {
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+.main .wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.main .wrap .slogan {
+  font-size: 3rem;
+}
+.main .wrap .sub-slogan {
+  font-size: 1.5rem;
+  width: 70%;
+  line-height: 2;
+  font-weight: 500;
+}
+.main .wrap .btn-group {
+  display: flex;
+  gap: 15px;
+}
+.main .wrap .btn-group .btn {
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #facc15;
+  color: #000;
+}
+.main .wrap .btn-group .btn:hover {
+  background-color: #ceb038;
+  color: #000;
+}
+.main .wrap .btn-group .btn.border {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.main .wrap .btn-group .btn.border:hover {
+  background-color: #fff;
+  color: #000;
+}
+.main .wrap .btn-group .btn.danger {
+  background-color: #fa5615;
+  color: #fff;
+}
+.main .wrap .btn-group .btn.danger:hover {
+  background-color: #bd400f;
+  color: #fff;
+}
+
+.info {
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+.info .slogan {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.info .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.info .row > div {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.info .row h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #4621ac;
+}
+.info .row p {
+  text-align: center;
+  line-height: 25px;
+}
+
+.footer {
+  background-color: #1f2937;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header .wrap {
+    position: relative;
+    justify-content: center;
+  }
+  .header .wrap .hamburger {
+    display: grid;
+    position: absolute;
+    right: 0;
+  }
+  .header .wrap .hamburger.active > span {
+    background-color: #fd1f1f;
+  }
+  .header .wrap .hamburger > span {
+    transition: all 0.3s ease;
+  }
+  .header .wrap .menu {
+    display: none;
+  }
+  .main .wrap .btn-group {
+    flex-direction: column;
+    width: 300px;
+  }
+  .info .row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main .wrap .btn-group {
+    width: unset;
+  }
+}/*# sourceMappingURL=layout-hero.css.map */

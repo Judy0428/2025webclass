@@ -1,0 +1,59 @@
+@media screen and (max-width: 768px) {
+    .header {
+        .wrap {
+            position: relative;
+            justify-content: center;
+
+            .hamburger {
+                display: grid;
+                position: absolute;
+                right: 0;
+
+                &.active {
+                    > span {
+                        background-color: #fd1f1f;
+                    }
+                }
+
+                > span {
+                    transition: all 0.3s ease;
+                }
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .logo {
+                // text-align: center;
+                // flex: 1;
+            }
+        }
+    }
+
+    .main {
+        .wrap {
+            .btn-group {
+                flex-direction: column;
+                width: 300px;
+            }
+        }
+    }
+
+    .info {
+        .row {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        .wrap {
+            .btn-group {
+                width: unset;
+            }
+        }
+    }
+}
